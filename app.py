@@ -51,8 +51,8 @@ class App:
         ''' Salva os paths em um arquivo. '''
         if self.pathV1 and self.pathV2:
             filePath = open("path", "w")
-            for path in content:
-                filePath.write(path + '\n')
+            filePath.write(self.pathV1 + '\n')
+            filePath.write(self.pathV2 + '\n')
             filePath.close()
         else:
             messagebox.showinfo("Atenção", "Ambos os paths precisam estar setados para salvar.")
